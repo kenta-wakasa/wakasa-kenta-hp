@@ -1,0 +1,2175 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>若さ健太 公式サイト｜甲賀市議会議員（国民民主党）</title>
+    <meta
+      name="description"
+      content="甲賀市議会議員・若さ健太（国民民主党）の公式サイト。都会で疲弊している場合じゃない。豊かな暮らしは甲賀にある！100年続くまちづくりに挑戦中。後援会員募集中（入会無料）。"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --yellow: #f9be00;
+        --yellow-light: #fff4cc;
+        --blue: #003f88;
+        --blue-dark: #002d61;
+        --blue-light: #e8f0fa;
+        --white: #ffffff;
+        --ink: #1a2a44;
+        --gray: #5b6b80;
+        --radius: 20px;
+        --font-round: "Zen Kaku Gothic New", "Noto Sans JP", sans-serif;
+        --font-base: "Noto Sans JP", sans-serif;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 70px;
+      }
+      body {
+        font-family: var(--font-base);
+        color: var(--ink);
+        background: var(--white);
+        line-height: 1.9;
+        overflow-x: hidden;
+        -webkit-font-smoothing: antialiased;
+      }
+      img {
+        max-width: 100%;
+        display: block;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      .container {
+        max-width: 1080px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      /* ===== ボタン ===== */
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        font-family: var(--font-round);
+        font-weight: 900;
+        border-radius: 999px;
+        text-align: center;
+        transition:
+          transform 0.2s,
+          box-shadow 0.2s;
+        cursor: pointer;
+      }
+      .btn:hover {
+        transform: translateY(-3px);
+      }
+      .btn:active {
+        transform: translateY(0);
+      }
+      .btn-primary {
+        background: var(--yellow);
+        color: var(--blue);
+        padding: 18px 40px;
+        font-size: 1.15rem;
+        box-shadow:
+          0 6px 0 #d9a600,
+          0 12px 24px rgba(249, 190, 0, 0.35);
+      }
+      .btn-primary:hover {
+        box-shadow:
+          0 8px 0 #d9a600,
+          0 16px 32px rgba(249, 190, 0, 0.45);
+      }
+      .btn-secondary {
+        background: #06c755;
+        color: #fff;
+        padding: 16px 36px;
+        font-size: 1.05rem;
+        box-shadow:
+          0 6px 0 #05a447,
+          0 12px 24px rgba(6, 199, 85, 0.3);
+      }
+      .btn-blue {
+        background: var(--blue);
+        color: #fff;
+        padding: 14px 32px;
+        font-size: 1rem;
+        box-shadow:
+          0 5px 0 var(--blue-dark),
+          0 10px 20px rgba(0, 63, 136, 0.3);
+      }
+      .btn-badge {
+        position: absolute;
+        top: -14px;
+        right: -8px;
+        background: #e94f37;
+        color: #fff;
+        font-size: 0.72rem;
+        font-weight: 900;
+        padding: 4px 12px;
+        border-radius: 999px;
+        transform: rotate(6deg);
+        box-shadow: 0 3px 8px rgba(233, 79, 55, 0.4);
+      }
+
+      /* ===== ヘッダー ===== */
+      header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        background: rgba(255, 255, 255, 0.92);
+        backdrop-filter: blur(12px);
+        box-shadow: 0 2px 12px rgba(0, 45, 97, 0.08);
+        transition: transform 0.3s ease;
+      }
+      header.hidden {
+        transform: translateY(-100%);
+      }
+      .header-inner {
+        max-width: 1080px;
+        margin: 0 auto;
+        padding: 0 16px;
+        height: 62px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-family: var(--font-round);
+      }
+      .brand-mark {
+        width: 38px;
+        height: 38px;
+        border-radius: 12px;
+        background: var(--yellow);
+        color: var(--blue);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 900;
+        font-size: 1.1rem;
+        box-shadow: 0 2px 6px rgba(249, 190, 0, 0.4);
+      }
+      .brand-name {
+        font-weight: 900;
+        font-size: 1.15rem;
+        color: var(--blue);
+        letter-spacing: 0.04em;
+      }
+      .brand-sub {
+        font-size: 0.6rem;
+        color: var(--gray);
+        font-weight: 700;
+        letter-spacing: 0.02em;
+        line-height: 1.3;
+        white-space: nowrap;
+      }
+      @media (max-width: 390px) {
+        .brand-sub {
+          display: none !important;
+        }
+      }
+      nav.pc-nav {
+        display: none;
+        gap: 26px;
+        font-weight: 700;
+        font-size: 0.92rem;
+      }
+      nav.pc-nav a {
+        color: var(--ink);
+        position: relative;
+        padding: 4px 0;
+      }
+      nav.pc-nav a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 3px;
+        background: var(--yellow);
+        border-radius: 2px;
+        transition: width 0.25s;
+      }
+      nav.pc-nav a:hover::after {
+        width: 100%;
+      }
+      .header-cta {
+        background: var(--yellow);
+        color: var(--blue);
+        font-family: var(--font-round);
+        font-weight: 900;
+        font-size: 0.85rem;
+        padding: 9px 18px;
+        border-radius: 999px;
+        box-shadow: 0 3px 0 #d9a600;
+        white-space: nowrap;
+      }
+      @media (min-width: 900px) {
+        nav.pc-nav {
+          display: flex;
+        }
+        .header-inner {
+          height: 70px;
+        }
+      }
+
+      /* ===== ヒーロー ===== */
+      .hero {
+        position: relative;
+        background:
+          radial-gradient(
+            circle at 85% 15%,
+            rgba(249, 190, 0, 0.25),
+            transparent 40%
+          ),
+          radial-gradient(
+            circle at 10% 90%,
+            rgba(0, 63, 136, 0.08),
+            transparent 45%
+          ),
+          linear-gradient(160deg, #fffdf5 0%, #fff6d8 55%, #ffedad 100%);
+        padding: 96px 0 0;
+        overflow: hidden;
+      }
+      .hero-inner {
+        max-width: 1080px;
+        margin: 0 auto;
+        padding: 0 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .hero-copy {
+        text-align: center;
+        position: relative;
+        z-index: 2;
+      }
+      .hero-tags {
+        display: flex;
+        gap: 8px;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 18px;
+      }
+      .tag {
+        background: var(--blue);
+        color: #fff;
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        padding: 5px 16px;
+        border-radius: 999px;
+      }
+      .tag.tag-y {
+        background: var(--yellow);
+        color: var(--blue);
+      }
+      .hero-catch {
+        font-family: var(--font-round);
+        font-weight: 900;
+        font-size: clamp(2.5rem, 10vw, 4.6rem);
+        line-height: 1.35;
+        color: var(--blue);
+        letter-spacing: 0.05em;
+      }
+      .hero-catch .accent {
+        color: #e94f37;
+      }
+      .hero-catch .marker {
+        background: linear-gradient(transparent 62%, var(--yellow) 62%);
+        padding: 0 2px;
+      }
+      .hero-name {
+        margin-top: 20px;
+        font-family: var(--font-round);
+        font-weight: 900;
+        font-size: clamp(1.7rem, 6.5vw, 2.6rem);
+        color: var(--ink);
+        letter-spacing: 0.08em;
+        line-height: 1.2;
+      }
+      .hero-name small {
+        display: block;
+        font-size: 0.85rem;
+        letter-spacing: 0.35em;
+        color: var(--gray);
+        font-weight: 700;
+        margin-bottom: 6px;
+      }
+      .hero-role {
+        margin-top: 10px;
+        font-weight: 700;
+        color: var(--blue);
+        font-size: clamp(0.9rem, 3vw, 1.05rem);
+        letter-spacing: 0.06em;
+      }
+      .hero-btns {
+        margin-top: 28px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        align-items: center;
+        position: relative;
+        z-index: 2;
+      }
+      .hero-btns .btn {
+        position: relative;
+        width: min(320px, 86vw);
+      }
+      .hero-photo {
+        margin-top: 8px;
+        position: relative;
+        z-index: 1;
+        width: min(420px, 88vw);
+      }
+      .hero-photo img {
+        width: 100%;
+        filter: drop-shadow(0 20px 40px rgba(0, 45, 97, 0.22));
+      }
+      .hero-photo::before {
+        content: "";
+        position: absolute;
+        inset: auto 0 0;
+        height: 46%;
+        z-index: -1;
+        background: radial-gradient(
+          ellipse at bottom,
+          rgba(249, 190, 0, 0.5),
+          transparent 70%
+        );
+      }
+      @media (min-width: 900px) {
+        .hero {
+          padding-top: 120px;
+        }
+        .hero-inner {
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: flex-end;
+          gap: 20px;
+        }
+        .hero-copy {
+          text-align: left;
+          padding-bottom: 90px;
+        }
+        .hero-tags {
+          justify-content: flex-start;
+        }
+        .hero-btns {
+          align-items: flex-start;
+          flex-direction: row;
+        }
+        .hero-btns .btn {
+          width: auto;
+        }
+        .hero-photo {
+          flex-shrink: 0;
+        }
+      }
+      .wave {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin-bottom: -1px;
+      }
+
+      /* ===== セクション共通 ===== */
+      section {
+        padding: 72px 0;
+      }
+      .sec-head {
+        text-align: center;
+        margin-bottom: 44px;
+      }
+      .sec-en {
+        font-family: var(--font-round);
+        font-weight: 900;
+        color: var(--yellow);
+        font-size: 0.85rem;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        display: block;
+        margin-bottom: 6px;
+      }
+      .sec-title {
+        font-family: var(--font-round);
+        font-weight: 900;
+        font-size: clamp(1.6rem, 5.5vw, 2.3rem);
+        color: var(--blue);
+        letter-spacing: 0.05em;
+        line-height: 1.4;
+      }
+      .sec-lead {
+        margin-top: 14px;
+        color: var(--gray);
+        font-size: 0.95rem;
+        font-weight: 500;
+      }
+
+      /* ふわっと出現 */
+      .reveal {
+        opacity: 0;
+        transform: translateY(28px);
+        transition:
+          opacity 0.7s ease,
+          transform 0.7s ease;
+      }
+      .reveal.show {
+        opacity: 1;
+        transform: none;
+      }
+
+      /* ===== 在り方 ===== */
+      .stance {
+        background: var(--white);
+      }
+      .stance-grid {
+        display: grid;
+        gap: 20px;
+      }
+      @media (min-width: 760px) {
+        .stance-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+      .stance-card {
+        background: var(--blue-light);
+        border-radius: var(--radius);
+        padding: 34px 26px;
+        text-align: center;
+        position: relative;
+        border: 3px solid transparent;
+        transition:
+          border-color 0.25s,
+          transform 0.25s;
+      }
+      .stance-card:hover {
+        border-color: var(--yellow);
+        transform: translateY(-6px);
+      }
+      .stance-num {
+        position: absolute;
+        top: -16px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: var(--yellow);
+        color: var(--blue);
+        font-family: var(--font-round);
+        font-weight: 900;
+        font-size: 0.9rem;
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 10px rgba(249, 190, 0, 0.4);
+      }
+      .stance-icon {
+        font-size: 2.6rem;
+        line-height: 1;
+        margin-bottom: 14px;
+      }
+      .stance-card h3 {
+        font-family: var(--font-round);
+        font-weight: 900;
+        color: var(--blue);
+        font-size: 1.3rem;
+        margin-bottom: 12px;
+        letter-spacing: 0.05em;
+      }
+      .stance-card p {
+        font-size: 0.92rem;
+        text-align: left;
+        color: var(--ink);
+      }
+
+      /* ===== ミッション ===== */
+      .mission {
+        background: #fff;
+      }
+      .mission-wrap {
+        display: grid;
+        gap: 28px;
+        align-items: center;
+        max-width: 920px;
+        margin: 0 auto;
+      }
+      @media (min-width: 820px) {
+        .mission-wrap {
+          grid-template-columns: 1.2fr 0.8fr;
+        }
+      }
+      .mission-text p {
+        font-size: 0.98rem;
+        margin-bottom: 1em;
+      }
+      .mission-text p:last-child {
+        margin-bottom: 0;
+      }
+      .mission-text strong {
+        color: var(--blue);
+        font-weight: 900;
+        background: linear-gradient(transparent 62%, var(--yellow-light) 62%);
+      }
+      .mission-photo img {
+        width: min(300px, 65vw);
+        margin: 0 auto;
+        filter: drop-shadow(0 12px 24px rgba(0, 45, 97, 0.18));
+      }
+
+      /* ===== 政策 ===== */
+      .policy {
+        background: linear-gradient(
+          180deg,
+          var(--blue) 0%,
+          var(--blue-dark) 100%
+        );
+        position: relative;
+      }
+      .policy .sec-title {
+        color: #fff;
+      }
+      .policy .sec-en {
+        color: var(--yellow);
+      }
+      .policy .sec-lead {
+        color: #b9cbe4;
+      }
+      .policy-grid {
+        display: grid;
+        gap: 22px;
+      }
+      @media (min-width: 760px) {
+        .policy-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+      .policy-card {
+        background: #fff;
+        border-radius: var(--radius);
+        padding: 32px 26px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+        transition: transform 0.25s;
+      }
+      .policy-card:hover {
+        transform: translateY(-6px);
+      }
+      .policy-icon {
+        width: 64px;
+        height: 64px;
+        border-radius: 18px;
+        background: var(--yellow-light);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        margin-bottom: 16px;
+      }
+      .policy-card h3 {
+        font-family: var(--font-round);
+        font-weight: 900;
+        color: var(--blue);
+        font-size: 1.22rem;
+        line-height: 1.5;
+        margin-bottom: 10px;
+      }
+      .policy-card p {
+        font-size: 0.92rem;
+        color: var(--ink);
+      }
+      .p-issue,
+      .p-solve {
+        margin-top: 14px;
+      }
+      .p-issue p,
+      .p-solve p {
+        font-size: 0.88rem;
+        margin-top: 6px;
+      }
+      .p-label {
+        display: inline-block;
+        font-family: var(--font-round);
+        font-weight: 900;
+        font-size: 0.75rem;
+        letter-spacing: 0.1em;
+        padding: 2px 14px;
+        border-radius: 999px;
+      }
+      .p-label-issue {
+        background: var(--blue-light);
+        color: var(--blue);
+      }
+      .p-label-solve {
+        background: var(--yellow);
+        color: var(--blue);
+      }
+      .policy-note {
+        margin-top: 34px;
+        text-align: center;
+        color: #fff;
+        font-family: var(--font-round);
+        font-weight: 700;
+        font-size: 1.02rem;
+      }
+      .policy-note .marker {
+        background: linear-gradient(
+          transparent 60%,
+          rgba(249, 190, 0, 0.9) 60%
+        );
+        color: #fff;
+        padding: 0 2px;
+      }
+
+      /* ===== ストーリー ===== */
+      .story {
+        background: linear-gradient(180deg, #fffdf5, #fff4cc);
+      }
+      .story-list {
+        display: flex;
+        flex-direction: column;
+        gap: 56px;
+        max-width: 860px;
+        margin: 0 auto;
+      }
+      .story-item {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        border-radius: var(--radius);
+        overflow: hidden;
+        background: #fff;
+        box-shadow: 0 12px 32px rgba(0, 45, 97, 0.12);
+      }
+      .story-photo {
+        position: relative;
+        aspect-ratio: 4/3;
+        overflow: hidden;
+      }
+      .story-photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s;
+      }
+      .story-item:hover .story-photo img {
+        transform: scale(1.04);
+      }
+      .story-chip {
+        position: absolute;
+        top: 14px;
+        left: 14px;
+        background: var(--yellow);
+        color: var(--blue);
+        font-family: var(--font-round);
+        font-weight: 900;
+        font-size: 0.8rem;
+        padding: 6px 16px;
+        border-radius: 999px;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+      }
+      .story-body {
+        padding: 28px 26px 32px;
+      }
+      .story-body h3 {
+        font-family: var(--font-round);
+        font-weight: 900;
+        color: var(--blue);
+        font-size: 1.4rem;
+        margin-bottom: 12px;
+        letter-spacing: 0.04em;
+      }
+      .story-body p {
+        font-size: 0.95rem;
+        margin-bottom: 0.8em;
+      }
+      .story-body p:last-child {
+        margin-bottom: 0;
+      }
+      .story-body .quote {
+        font-family: var(--font-round);
+        font-weight: 900;
+        color: var(--blue);
+        background: var(--yellow-light);
+        border-left: 5px solid var(--yellow);
+        padding: 12px 16px;
+        border-radius: 8px;
+        font-size: 1rem;
+      }
+      @media (min-width: 760px) {
+        .story-item {
+          flex-direction: row;
+          align-items: stretch;
+        }
+        .story-item:nth-child(even) {
+          flex-direction: row-reverse;
+        }
+        .story-photo {
+          width: 42%;
+          aspect-ratio: auto;
+          flex-shrink: 0;
+        }
+        .story-body {
+          width: 58%;
+          padding: 36px 34px;
+        }
+      }
+
+      /* ===== プロフィール ===== */
+      .profile {
+        background: #fff;
+      }
+      .profile-wrap {
+        display: grid;
+        gap: 44px;
+        max-width: 900px;
+        margin: 0 auto;
+      }
+      @media (min-width: 860px) {
+        .profile-wrap {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      .timeline {
+        position: relative;
+        padding-left: 28px;
+      }
+      .timeline::before {
+        content: "";
+        position: absolute;
+        left: 8px;
+        top: 6px;
+        bottom: 6px;
+        width: 4px;
+        background: var(--yellow);
+        border-radius: 2px;
+      }
+      .tl-item {
+        position: relative;
+        padding-bottom: 22px;
+      }
+      .tl-item:last-child {
+        padding-bottom: 0;
+      }
+      .tl-item::before {
+        content: "";
+        position: absolute;
+        left: -26px;
+        top: 8px;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background: #fff;
+        border: 4px solid var(--blue);
+      }
+      .tl-item.now::before {
+        background: var(--yellow);
+        border-color: var(--blue);
+      }
+      .tl-year {
+        font-family: var(--font-round);
+        font-weight: 900;
+        color: var(--blue);
+        font-size: 1.05rem;
+        letter-spacing: 0.04em;
+      }
+      .tl-text {
+        font-size: 0.92rem;
+        color: var(--ink);
+      }
+      .tl-item.now .tl-text {
+        font-weight: 900;
+        color: var(--blue);
+      }
+      .info-card {
+        background: var(--blue-light);
+        border-radius: var(--radius);
+        padding: 30px 26px;
+      }
+      .info-card h3 {
+        font-family: var(--font-round);
+        font-weight: 900;
+        color: var(--blue);
+        font-size: 1.15rem;
+        margin-bottom: 16px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .info-list {
+        list-style: none;
+        font-size: 0.92rem;
+      }
+      .info-list li {
+        display: flex;
+        gap: 12px;
+        padding: 9px 0;
+        border-bottom: 1px dashed rgba(0, 63, 136, 0.2);
+      }
+      .info-list li:last-child {
+        border-bottom: none;
+      }
+      .info-list .k {
+        flex-shrink: 0;
+        width: 78px;
+        font-weight: 700;
+        color: var(--blue);
+      }
+      .skill-chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 14px;
+      }
+      .chip {
+        background: #fff;
+        color: var(--blue);
+        border: 2px solid var(--yellow);
+        font-family: var(--font-round);
+        font-weight: 700;
+        font-size: 0.8rem;
+        padding: 5px 14px;
+        border-radius: 999px;
+      }
+
+      /* ===== 活動 ===== */
+      .activity {
+        background: linear-gradient(180deg, var(--blue-light), #fff);
+      }
+      .activity-grid {
+        display: grid;
+        gap: 20px;
+        max-width: 900px;
+        margin: 0 auto;
+      }
+      @media (min-width: 700px) {
+        .activity-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      .act-card {
+        background: #fff;
+        border-radius: var(--radius);
+        overflow: hidden;
+        box-shadow: 0 8px 24px rgba(0, 45, 97, 0.12);
+        transition: transform 0.25s;
+      }
+      .act-card:hover {
+        transform: translateY(-5px);
+      }
+      .act-card img {
+        aspect-ratio: 4/3;
+        width: 100%;
+        object-fit: cover;
+      }
+      .act-card .act-body {
+        padding: 20px 22px;
+      }
+      .act-card h3 {
+        font-family: var(--font-round);
+        font-weight: 900;
+        color: var(--blue);
+        font-size: 1.1rem;
+        margin-bottom: 6px;
+      }
+      .act-card p {
+        font-size: 0.88rem;
+        color: var(--gray);
+      }
+      .sns-row {
+        margin-top: 36px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        justify-content: center;
+      }
+      .sns-btn {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background: #fff;
+        border: 2px solid var(--blue-light);
+        border-radius: 999px;
+        padding: 12px 24px;
+        font-family: var(--font-round);
+        font-weight: 900;
+        font-size: 0.92rem;
+        color: var(--blue);
+        box-shadow: 0 4px 12px rgba(0, 45, 97, 0.08);
+        transition:
+          transform 0.2s,
+          border-color 0.2s;
+      }
+      .sns-btn:hover {
+        transform: translateY(-3px);
+        border-color: var(--yellow);
+      }
+      .sns-ic {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        flex-shrink: 0;
+      }
+      .sns-ic svg {
+        width: 16px;
+        height: 16px;
+        fill: #fff;
+      }
+      .ic-x {
+        background: #000;
+      }
+      .ic-ig {
+        background: radial-gradient(
+          circle at 30% 110%,
+          #fdf497 0%,
+          #fdf497 5%,
+          #fd5949 45%,
+          #d6249f 60%,
+          #285aeb 90%
+        );
+      }
+      .ic-note {
+        background: #000;
+        border-radius: 8px;
+      }
+      .ic-note svg {
+        width: 24px;
+        height: 24px;
+      }
+      .ic-line {
+        background: #06c755;
+      }
+      .ic-line svg {
+        width: 18px;
+        height: 18px;
+      }
+
+      /* ===== 後援会 ===== */
+      .support {
+        background:
+          radial-gradient(
+            circle at 12% 20%,
+            rgba(255, 255, 255, 0.14),
+            transparent 35%
+          ),
+          radial-gradient(
+            circle at 88% 80%,
+            rgba(255, 255, 255, 0.1),
+            transparent 35%
+          ),
+          linear-gradient(150deg, var(--yellow) 0%, #ffcd2e 100%);
+        position: relative;
+        overflow: hidden;
+      }
+      .support .sec-en {
+        color: var(--blue);
+      }
+      .support .sec-title {
+        color: var(--blue);
+      }
+      .support .sec-lead {
+        color: var(--ink);
+      }
+      .join-grid {
+        display: grid;
+        gap: 24px;
+        max-width: 980px;
+        margin: 0 auto;
+      }
+      @media (min-width: 880px) {
+        .join-grid {
+          grid-template-columns: 1.15fr 0.85fr;
+          align-items: stretch;
+        }
+      }
+      .join-card {
+        background: #fff;
+        border-radius: 24px;
+        padding: 36px 28px;
+        text-align: center;
+        position: relative;
+        box-shadow: 0 16px 40px rgba(0, 45, 97, 0.18);
+      }
+      .join-card h3 {
+        font-family: var(--font-round);
+        font-weight: 900;
+        color: var(--blue);
+        font-size: 1.35rem;
+        margin-bottom: 12px;
+        letter-spacing: 0.04em;
+      }
+      .join-card > p {
+        font-size: 0.9rem;
+        color: var(--ink);
+      }
+      .join-card .btn {
+        position: relative;
+        margin-top: 20px;
+        width: min(320px, 100%);
+      }
+      .join-badge {
+        position: absolute;
+        top: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #e94f37;
+        color: #fff;
+        font-family: var(--font-round);
+        font-weight: 900;
+        font-size: 0.82rem;
+        padding: 5px 20px;
+        border-radius: 999px;
+        white-space: nowrap;
+        box-shadow: 0 4px 10px rgba(233, 79, 55, 0.4);
+      }
+      .join-sub-grid {
+        display: grid;
+        gap: 24px;
+      }
+      .support-points {
+        display: grid;
+        gap: 12px;
+        margin: 24px 0 6px;
+      }
+      .sp-item {
+        background: var(--yellow-light);
+        border-radius: 16px;
+        padding: 16px 18px;
+        display: flex;
+        gap: 14px;
+        align-items: flex-start;
+        text-align: left;
+      }
+      .sp-item .sp-ic {
+        font-size: 1.6rem;
+        line-height: 1.4;
+      }
+      .sp-item h4 {
+        font-family: var(--font-round);
+        font-weight: 900;
+        color: var(--blue);
+        font-size: 0.98rem;
+        margin-bottom: 2px;
+      }
+      .sp-item p {
+        font-size: 0.82rem;
+        color: var(--ink);
+      }
+      .support-sub {
+        margin-top: 16px;
+        font-size: 0.78rem;
+        color: var(--gray);
+      }
+      .join-sns {
+        display: flex;
+        justify-content: center;
+        gap: 14px;
+        margin-top: 20px;
+      }
+      .join-sns a {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.2s;
+      }
+      .join-sns a:hover {
+        transform: translateY(-3px);
+      }
+      .join-sns svg {
+        width: 20px;
+        height: 20px;
+        fill: #fff;
+      }
+      .join-sns .join-note svg {
+        width: 30px;
+        height: 30px;
+      }
+      .join-x {
+        background: #000;
+      }
+      .join-ig {
+        background: radial-gradient(
+          circle at 30% 110%,
+          #fdf497 0%,
+          #fdf497 5%,
+          #fd5949 45%,
+          #d6249f 60%,
+          #285aeb 90%
+        );
+      }
+      .join-note {
+        background: #000;
+        border-radius: 14px !important;
+      }
+
+      /* ===== お問い合わせ ===== */
+      .contact {
+        background: #fff;
+      }
+      .contact-cta {
+        text-align: center;
+      }
+
+      /* ===== フッター ===== */
+      footer {
+        background: var(--blue-dark);
+        color: #fff;
+        padding: 52px 0 110px;
+        text-align: center;
+      }
+      .footer-name {
+        font-family: var(--font-round);
+        font-weight: 900;
+        font-size: 1.5rem;
+        letter-spacing: 0.1em;
+      }
+      .footer-role {
+        font-size: 0.82rem;
+        color: #9db4d4;
+        margin-top: 4px;
+      }
+      .footer-party {
+        margin: 22px auto 0;
+        width: 150px;
+      }
+      .footer-party img {
+        width: 100%;
+        border-radius: 8px;
+      }
+      .footer-info {
+        margin-top: 22px;
+        font-size: 0.82rem;
+        color: #b9cbe4;
+        line-height: 2;
+      }
+      .footer-sns {
+        display: flex;
+        gap: 14px;
+        justify-content: center;
+        margin-top: 22px;
+      }
+      .footer-sns a {
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.12);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        transition:
+          background 0.2s,
+          color 0.2s;
+      }
+      .footer-sns a svg {
+        width: 18px;
+        height: 18px;
+        fill: currentColor;
+      }
+      .footer-sns a.fs-note svg {
+        width: 26px;
+        height: 26px;
+      }
+      .footer-sns a:hover {
+        background: var(--yellow);
+        color: var(--blue);
+      }
+      .copyright {
+        margin-top: 28px;
+        font-size: 0.72rem;
+        color: #7e96bd;
+      }
+
+      /* ===== モバイル固定CTA ===== */
+      .sticky-cta {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 99;
+        display: flex;
+        gap: 10px;
+        padding: 10px 14px calc(10px + env(safe-area-inset-bottom));
+        background: rgba(255, 255, 255, 0.94);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 -4px 20px rgba(0, 45, 97, 0.15);
+        transform: translateY(110%);
+        transition: transform 0.35s;
+      }
+      .sticky-cta.show {
+        transform: none;
+      }
+      .sticky-cta a {
+        flex: 1;
+        text-align: center;
+        font-family: var(--font-round);
+        font-weight: 900;
+        font-size: 0.92rem;
+        padding: 13px 8px;
+        border-radius: 999px;
+      }
+      .sticky-cta .s-join {
+        background: var(--yellow);
+        color: var(--blue);
+        box-shadow: 0 3px 0 #d9a600;
+      }
+      .sticky-cta .s-line {
+        background: #06c755;
+        color: #fff;
+        box-shadow: 0 3px 0 #05a447;
+      }
+      @media (min-width: 900px) {
+        .sticky-cta {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ヘッダー -->
+    <header>
+      <div class="header-inner">
+        <a href="#top" class="brand">
+          <span class="brand-mark">若</span>
+          <span>
+            <span class="brand-name">若さ健太</span>
+            <span class="brand-sub" style="display: block"
+              >甲賀市議会議員｜国民民主党</span
+            >
+          </span>
+        </a>
+        <nav class="pc-nav">
+          <a href="#mission">ミッション</a>
+          <a href="#policy">政策</a>
+          <a href="#stance">在り方</a>
+          <a href="#story">ストーリー</a>
+          <a href="#profile">プロフィール</a>
+          <a href="#activity">活動</a>
+        </nav>
+        <a
+          class="header-cta"
+          href="https://forms.gle/qvF7CN6Uri2Cz6zA9"
+          target="_blank"
+          rel="noopener"
+          >後援会に入る（無料）</a
+        >
+      </div>
+    </header>
+
+    <!-- ヒーロー -->
+    <div class="hero" id="top">
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <div class="hero-tags">
+            <span class="tag">甲賀市議会議員（1期目）</span>
+            <span class="tag tag-y">国民民主党</span>
+            <span class="tag tag-y">30代</span>
+          </div>
+          <h1 class="hero-catch">
+            若さ<span class="accent">爆発！</span><br />
+            <span class="marker">甲賀を元気に</span>
+          </h1>
+          <p class="hero-name"><small>WAKASA KENTA</small>若さ健太</p>
+          <p class="hero-role">若さあふれる挑戦で、100年続くまちづくりを。</p>
+          <div class="hero-btns">
+            <a
+              class="btn btn-primary"
+              href="https://forms.gle/qvF7CN6Uri2Cz6zA9"
+              target="_blank"
+              rel="noopener"
+            >
+              <span class="btn-badge">入会無料！</span>
+              後援会に入って応援する
+            </a>
+            <a
+              class="btn btn-secondary"
+              href="https://lin.ee/UF5hcJx"
+              target="_blank"
+              rel="noopener"
+              >公式LINEで友だちになる</a
+            >
+          </div>
+        </div>
+        <div class="hero-photo">
+          <img src="images/portrait/main.png" alt="若さ健太の写真" />
+        </div>
+      </div>
+      <svg
+        class="wave"
+        viewBox="0 0 1440 70"
+        preserveAspectRatio="none"
+        aria-hidden="true"
+      >
+        <path
+          d="M0,40 C240,80 480,0 720,25 C960,50 1200,10 1440,40 L1440,70 L0,70 Z"
+          fill="#ffffff"
+        />
+      </svg>
+    </div>
+
+    <!-- ミッション -->
+    <section class="mission" id="mission">
+      <div class="container">
+        <div class="sec-head reveal">
+          <span class="sec-en">Mission</span>
+          <h2 class="sec-title">
+            都会で疲弊している場合じゃない。<br />豊かな暮らしは、甲賀にある。
+          </h2>
+        </div>
+        <div class="mission-wrap reveal">
+          <div class="mission-text">
+            <p>
+              東京で働き詰めの日々に心と体をすり減らし、生き方を探し直した末にたどり着いたのが、甲賀の最果て・山女原（あけびはら）でした。豊かな自然、あたたかい人たち。都会で見失っていた「豊かさ」が、ここにはあふれています。
+            </p>
+            <p>
+              この豊かさを守り、次の世代へつなぐために、政治家になりました。<strong>「甲賀の魅力を発信すること」</strong>と<strong>「若者の夢あふれる居場所をつくること」</strong>の2つを軸に、地域のみなさんと手を取り合い、100年続くまちづくりに挑戦します。
+            </p>
+          </div>
+          <div class="mission-photo">
+            <img
+              src="images/portrait/未来を指す.png"
+              alt="未来を指差す若さ健太"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 政策 -->
+    <section class="policy" id="policy">
+      <div class="container">
+        <div class="sec-head reveal">
+          <span class="sec-en">Vision</span>
+          <h2 class="sec-title">甲賀市で取り組む3つの重点政策</h2>
+          <p class="sec-lead">
+            エンジニア × カフェ店主 ×
+            移住者。3つの視点で甲賀の課題を解決します。
+          </p>
+        </div>
+        <div class="policy-grid">
+          <div class="policy-card reveal">
+            <div class="policy-icon">🚌</div>
+            <h3>公共交通機関の拡充</h3>
+            <div class="p-issue">
+              <span class="p-label p-label-issue">課題</span>
+              <p>
+                車がないと病院にも買い物にも行きづらい。広い甲賀では、免許を返納した後の暮らしに不安を抱える方が少なくありません。
+              </p>
+            </div>
+            <div class="p-solve">
+              <span class="p-label p-label-solve">解決</span>
+              <p>
+                ライドシェアの利便性向上などで、いつでも自宅からどんな場所にもアクセスできる環境を整備。どこに住んでいても教育・福祉・行政サービスを受けられるやさしい社会へ。
+              </p>
+            </div>
+          </div>
+          <div class="policy-card reveal">
+            <div class="policy-icon">🏡</div>
+            <h3>空き家に子育て世帯を誘致</h3>
+            <div class="p-issue">
+              <span class="p-label p-label-issue">課題</span>
+              <p>
+                人口減少と空き家の増加で、学校・商店・お祭りなど、地域の機能が少しずつ失われつつあります。
+              </p>
+            </div>
+            <div class="p-solve">
+              <span class="p-label p-label-solve">解決</span>
+              <p>
+                定住支援金を新設し、空き家に子育て世帯を呼び込みます。全世代が助け合い、地域機能を維持しながら、持続可能な地方都市をつくります。
+              </p>
+            </div>
+          </div>
+          <div class="policy-card reveal">
+            <div class="policy-icon">📱</div>
+            <h3>やさしいデジタル化を推進</h3>
+            <div class="p-issue">
+              <span class="p-label p-label-issue">課題</span>
+              <p>
+                手続きのたびに遠い窓口まで足を運ぶ負担。職員も事務作業に追われ、市民一人ひとりに向き合う時間が足りません。
+              </p>
+            </div>
+            <div class="p-solve">
+              <span class="p-label p-label-solve">解決</span>
+              <p>
+                自宅で簡単に申請できる、誰にとってもやさしいデジタル化を推進。効率化で職員の負担を減らし、血の通った行政組織を目指します。
+              </p>
+            </div>
+          </div>
+        </div>
+        <p class="policy-note reveal">
+          現役エンジニアだからこそできる、<span class="marker"
+            >現場目線のまちづくり</span
+          >を進めます。
+        </p>
+      </div>
+    </section>
+
+    <!-- 在り方 -->
+    <section class="stance" id="stance">
+      <div class="container">
+        <div class="sec-head reveal">
+          <span class="sec-en">Values</span>
+          <h2 class="sec-title">若さ健太の「在り方」</h2>
+          <p class="sec-lead">
+            政治家としていちばん大切にしている、3つの約束です。
+          </p>
+        </div>
+        <div class="stance-grid">
+          <div class="stance-card reveal">
+            <span class="stance-num">1</span>
+            <span class="stance-icon">👂</span>
+            <h3>とことん聴く</h3>
+            <p>
+              市民の声を議会に届ける。これが政治家の仕事です。困っている当事者と会い、とことん聞きます。現場の声を大切にします。
+            </p>
+          </div>
+          <div class="stance-card reveal">
+            <span class="stance-num">2</span>
+            <span class="stance-icon">🌈</span>
+            <h3>個性を活かす</h3>
+            <p>
+              多様な思想や価値観を尊重します。ルールで個性を押さえつけるのではなく、ルールで個の可能性が解放される社会を実現します。
+            </p>
+          </div>
+          <div class="stance-card reveal">
+            <span class="stance-num">3</span>
+            <span class="stance-icon">🤝</span>
+            <h3>対決より解決</h3>
+            <p>
+              偏った思想を持たず、幅広い意見を取り入れます。批判をするだけでなく、真に市民のためになる現実的な提案を行い、実行します。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ストーリー -->
+    <section class="story" id="story">
+      <div class="container">
+        <div class="sec-head reveal">
+          <span class="sec-en">My Story</span>
+          <h2 class="sec-title">
+            どん底から、甲賀へ。<br />若さ健太のストーリー
+          </h2>
+          <p class="sec-lead">
+            なぜ東京を離れ、甲賀の最果てで政治家になったのか。
+          </p>
+        </div>
+        <div class="story-list">
+          <article class="story-item reveal">
+            <div class="story-photo">
+              <img
+                src="images/story/only_image/only_image_2.png"
+                alt="カフェで働く若さ健太"
+                loading="lazy"
+              />
+              <span class="story-chip">第1章</span>
+            </div>
+            <div class="story-body">
+              <h3>はじめまして、若さ健太です</h3>
+              <p>
+                東京から豊かな自然を求めて、甲賀の最果てに移住してきました。1994年8月15日生まれ。趣味はコーヒーとDIY。カフェ店主をしながら、プログラマーとしてアプリも作っています。
+              </p>
+              <p class="quote">
+                “都会で疲弊している場合じゃない。豊かな暮らしは甲賀にある！”
+              </p>
+              <p>
+                それをみんなに知ってほしくて、若さあふれる甲賀の魅力を発信しています。
+              </p>
+            </div>
+          </article>
+
+          <article class="story-item reveal">
+            <div class="story-photo">
+              <img
+                src="images/story/only_image/only_image_3.png"
+                alt="サラリーマン時代"
+                loading="lazy"
+              />
+              <span class="story-chip">第2章</span>
+            </div>
+            <div class="story-body">
+              <h3>廃人サラリーマン時代</h3>
+              <p>
+                子供の頃から夢だったゲーム会社に入社。しかし理想と現実のギャップに悩まされます。深夜まで働いてはコンビニ飯を食べる日々。成果を出せず、人間関係もうまくいかず、どんどん居場所をなくしていきました。
+              </p>
+              <p>
+                蔓延するコロナウイルス。大都会、ぽつんとひとりぼっち。鬱で低音難聴にまで追い詰められ、「生きるってなんだろう？」と自問自答する日々を過ごしました。
+              </p>
+            </div>
+          </article>
+
+          <article class="story-item reveal">
+            <div class="story-photo">
+              <img
+                src="images/story/only_image/only_image_4.png"
+                alt="フリーランス時代"
+                loading="lazy"
+              />
+              <span class="story-chip">第3章</span>
+            </div>
+            <div class="story-body">
+              <h3>馬車馬フリーランス時代</h3>
+              <p>
+                退職してアプリ開発エンジニアに転身。「年収1000万円稼ぐぞ！」と気合を入れて、1年で目標を達成しました。しかし、稼いでもなぜか満たされない。
+              </p>
+              <p>
+                作ったサービスはすぐに終了し、会社も次々と倒産。「本当に社会のためになっているのか？」——ここから、自分なりの生き方を探求し始めます。
+              </p>
+            </div>
+          </article>
+
+          <article class="story-item reveal">
+            <div class="story-photo">
+              <img
+                src="images/story/only_image/only_image_5.png"
+                alt="田舎暮らし満喫時代"
+                loading="lazy"
+              />
+              <span class="story-chip">第4章</span>
+            </div>
+            <div class="story-body">
+              <h3>田舎暮らし満喫時代</h3>
+              <p>
+                思い切って滋賀の古民家を購入！仲間を集めてシェアハウスを立ち上げました。筋トレジム作り、川でサウナ&BBQ、ゼロからサウナ小屋建築……。
+              </p>
+              <p>
+                都会で窮屈に夢を追うだけが人生じゃない。自然の中で思いっきり生きる。やりたいことをとことんやる。<strong
+                  >豊かな暮らしがここにあると確信しました。</strong
+                >
+              </p>
+            </div>
+          </article>
+
+          <article class="story-item reveal">
+            <div class="story-photo">
+              <img
+                src="images/story/only_image/only_image_6.png"
+                alt="泊まれるカフェやわらかそう"
+                loading="lazy"
+              />
+              <span class="story-chip">第5章</span>
+            </div>
+            <div class="story-body">
+              <h3>甲賀・山女原で「やわらかそう」を開業</h3>
+              <p>
+                結婚を機に甲賀の最果て・山女原（あけびはら）にお引越し。夫婦二人三脚で古民家をリノベして「泊まれるカフェやわらかそう」をオープンしました。
+              </p>
+              <p>
+                地元のみんなが気軽に集まれて、訪れた人が豊かさを再発見できる。自然とみんながやわらかく溶け合う、そんな場所を目指しています。
+              </p>
+            </div>
+          </article>
+
+          <article class="story-item reveal">
+            <div class="story-photo">
+              <img
+                src="images/story/only_image/only_image_7.png"
+                alt="山女原の風景"
+                loading="lazy"
+              />
+              <span class="story-chip">第6章</span>
+            </div>
+            <div class="story-body">
+              <h3>なんで山女原なん？</h3>
+              <p>
+                移住先に求めていたのは、とにかく自然が豊かで、古きよき古民家があり、家と家とが離れていて、ちょっと頑張ればたどり着ける場所。正直、日本全国を探せば同じ条件の田舎は他にもあると思います。
+              </p>
+              <p>
+                でも、ここに住んでいる方々が<strong>本当に魅力的</strong>なんです！みなさんのとりこになってしまったので、もう離れられません。
+              </p>
+            </div>
+          </article>
+
+          <article class="story-item reveal">
+            <div class="story-photo">
+              <img
+                src="images/story/only_image/only_image_8.png"
+                alt="地域のみなさんと"
+                loading="lazy"
+              />
+              <span class="story-chip">最終章</span>
+            </div>
+            <div class="story-body">
+              <h3>これから——100年続くまちづくりへ</h3>
+              <p>
+                地域のみなさんと手を取り合い、100年続くまちづくりをしていきます。軸は2つ。<strong>甲賀の魅力を発信すること</strong>、そして<strong>若者の夢あふれる居場所をつくること</strong>。
+              </p>
+              <p class="quote">
+                どうか、この「若さ」の挑戦を見守ってください！
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- プロフィール -->
+    <section class="profile" id="profile">
+      <div class="container">
+        <div class="sec-head reveal">
+          <span class="sec-en">Profile</span>
+          <h2 class="sec-title">プロフィール</h2>
+        </div>
+        <div class="profile-wrap">
+          <div class="reveal">
+            <div class="timeline">
+              <div class="tl-item">
+                <div class="tl-year">1994</div>
+                <div class="tl-text">8月15日、石川県に生まれる</div>
+              </div>
+              <div class="tl-item">
+                <div class="tl-year">2019</div>
+                <div class="tl-text">
+                  筑波大学大学院 図書館情報メディア専攻
+                  情報学修了。株式会社アトラスにゲームデザイナーとして入社
+                </div>
+              </div>
+              <div class="tl-item">
+                <div class="tl-year">2022</div>
+                <div class="tl-text">
+                  フリーランスエンジニアとして独立。恵比寿でエンジニアのシェアハウスを立ち上げ
+                </div>
+              </div>
+              <div class="tl-item">
+                <div class="tl-year">2023</div>
+                <div class="tl-text">
+                  滋賀県東近江市に古民家を購入しシェアハウスを立ち上げ
+                </div>
+              </div>
+              <div class="tl-item">
+                <div class="tl-year">2024</div>
+                <div class="tl-text">
+                  滋賀県甲賀市に古民家を購入し「泊まれるカフェやわらかそう」をオープン
+                </div>
+              </div>
+              <div class="tl-item now">
+                <div class="tl-year">2025</div>
+                <div class="tl-text">甲賀市議会議員に当選（現在1期目）</div>
+              </div>
+            </div>
+          </div>
+          <div class="reveal">
+            <div class="info-card">
+              <h3>📋 基本情報</h3>
+              <ul class="info-list">
+                <li>
+                  <span class="k">名前</span
+                  ><span>若狹 健太（わかさ けんた）</span>
+                </li>
+                <li>
+                  <span class="k">生年月日</span><span>1994年8月15日</span>
+                </li>
+                <li><span class="k">出身</span><span>石川県</span></li>
+                <li>
+                  <span class="k">現住所</span
+                  ><span>滋賀県甲賀市土山町山女原119</span>
+                </li>
+                <li><span class="k">所属</span><span>国民民主党</span></li>
+                <li>
+                  <span class="k">連絡先</span
+                  ><span>contact@wakasa-kenta.jp</span>
+                </li>
+              </ul>
+              <h3 style="margin-top: 24px">💪 資格・スキル</h3>
+              <div class="skill-chips">
+                <span class="chip">柔道初段</span>
+                <span class="chip">狩猟免許</span>
+                <span class="chip">サウナ・スパ健康アドバイザー</span>
+                <span class="chip">基本情報技術者</span>
+                <span class="chip">コーチング</span>
+                <span class="chip">プログラミング</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 活動 -->
+    <section class="activity" id="activity">
+      <div class="container">
+        <div class="sec-head reveal">
+          <span class="sec-en">Activity</span>
+          <h2 class="sec-title">日々の活動</h2>
+          <p class="sec-lead">
+            最新の活動報告は、Instagramとnoteで発信しています。
+          </p>
+        </div>
+        <div class="activity-grid">
+          <a
+            class="act-card reveal"
+            href="https://www.instagram.com/wakasa_kent"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              src="images/activity/市政報告会.png"
+              alt="市政報告会の様子"
+              loading="lazy"
+            />
+            <div class="act-body">
+              <h3>市政報告会・対話集会</h3>
+              <p>
+                市民のみなさんと膝を突き合わせて、まちの未来を語り合っています。
+              </p>
+            </div>
+          </a>
+          <a
+            class="act-card reveal"
+            href="https://note.com/wakasa_kenta"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              src="images/activity/辻立ち.png"
+              alt="辻立ちの様子"
+              loading="lazy"
+            />
+            <div class="act-body">
+              <h3>辻立ち・街頭活動</h3>
+              <p>
+                朝の交差点から元気をお届け！見かけたら気軽に声をかけてください。
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="sns-row reveal">
+          <a
+            class="sns-btn"
+            href="https://www.instagram.com/wakasa_kent"
+            target="_blank"
+            rel="noopener"
+            ><span class="sns-ic ic-ig"
+              ><svg viewBox="0 0 448 512" aria-hidden="true">
+                <path
+                  d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+                /></svg></span
+            >Instagramで活動を見る</a
+          >
+          <a
+            class="sns-btn"
+            href="https://note.com/wakasa_kenta"
+            target="_blank"
+            rel="noopener"
+            ><span class="sns-ic ic-note"
+              ><svg viewBox="0 0 493 493" aria-hidden="true">
+                <path
+                  d="m139.57,142.06c41.19,0,97.6-2.09,138.1-1.04,54.34,1.39,74.76,25.06,75.45,83.53.69,33.06,0,127.73,0,127.73h-58.79c0-82.83.35-96.5,0-122.6-.69-22.97-7.25-33.92-24.9-36.01-18.69-2.09-71.07-.35-71.07-.35v158.96h-58.79v-210.22Z"
+                /></svg></span
+            >noteで活動報告を読む</a
+          >
+          <a
+            class="sns-btn"
+            href="https://x.com/wakasa_kenta"
+            target="_blank"
+            rel="noopener"
+            ><span class="sns-ic ic-x"
+              ><svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+                /></svg></span
+            >Xをフォローする</a
+          >
+          <a
+            class="sns-btn"
+            href="https://lin.ee/UF5hcJx"
+            target="_blank"
+            rel="noopener"
+            ><span class="sns-ic ic-line"
+              ><svg viewBox="0 0 448 512" aria-hidden="true">
+                <path
+                  d="M272.1 204.2v71.1c0 1.8-1.4 3.2-3.2 3.2h-11.4c-1.1 0-2.1-.6-2.6-1.3l-32.6-44v42.2c0 1.8-1.4 3.2-3.2 3.2h-11.4c-1.8 0-3.2-1.4-3.2-3.2v-71.1c0-1.8 1.4-3.2 3.2-3.2h11.3c1 0 2.1.5 2.6 1.4l32.6 44v-42.2c0-1.8 1.4-3.2 3.2-3.2h11.4c1.8-.1 3.3 1.4 3.3 3.1zm-82-3.2h-11.4c-1.8 0-3.2 1.4-3.2 3.2v71.1c0 1.8 1.4 3.2 3.2 3.2h11.4c1.8 0 3.2-1.4 3.2-3.2v-71.1c0-1.7-1.4-3.2-3.2-3.2zm-27.5 59.6h-31.1v-56.4c0-1.8-1.4-3.2-3.2-3.2h-11.4c-1.8 0-3.2 1.4-3.2 3.2v71.1c0 .9.3 1.6.9 2.2.6.5 1.3.9 2.2.9h45.7c1.8 0 3.2-1.4 3.2-3.2v-11.4c0-1.7-1.4-3.2-3.1-3.2zM332.1 201h-45.7c-1.7 0-3.2 1.4-3.2 3.2v71.1c0 1.7 1.4 3.2 3.2 3.2h45.7c1.8 0 3.2-1.4 3.2-3.2v-11.4c0-1.8-1.4-3.2-3.2-3.2H301v-12h31.1c1.8 0 3.2-1.4 3.2-3.2V234c0-1.8-1.4-3.2-3.2-3.2H301v-12h31.1c1.8 0 3.2-1.4 3.2-3.2v-11.4c-.1-1.7-1.5-3.2-3.2-3.2zM448 113.7V399c-.1 44.8-36.8 81.1-81.7 81H81c-44.8-.1-81.1-36.9-81-81.7V113c.1-44.8 36.9-81.1 81.7-81H367c44.8.1 81.1 36.8 81 81.7zm-61.6 122.6c0-73-73.2-132.4-163.1-132.4-89.9 0-163.1 59.4-163.1 132.4 0 65.4 58 120.2 136.4 130.6 19.1 4.1 16.9 11.1 12.6 36.8-.7 4.1-3.3 16.1 14.1 8.8 17.4-7.3 93.9-55.3 128.2-94.7 23.6-26 34.9-52.3 34.9-81.5z"
+                /></svg></span
+            >公式LINEで友だち追加</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- 後援会 -->
+    <section class="support" id="support">
+      <div class="container">
+        <div class="sec-head reveal">
+          <span class="sec-en">Join Us!</span>
+          <h2 class="sec-title">若さ健太を応援する</h2>
+          <p class="sec-lead">
+            「ちょっと気になる」「頑張れって思ってる」——それだけで十分です。<br />あなたに合った方法で、力を貸してください。
+          </p>
+        </div>
+        <div class="join-grid">
+          <div class="join-card join-main reveal">
+            <span class="join-badge">いちばんの応援！</span>
+            <h3>後援会に入る</h3>
+            <div class="support-points">
+              <div class="sp-item">
+                <span class="sp-ic">💰</span>
+                <div>
+                  <h4>入会は完全無料</h4>
+                  <p>会費や料金は一切かかりません。</p>
+                </div>
+              </div>
+              <div class="sp-item">
+                <span class="sp-ic">🙆</span>
+                <div>
+                  <h4>参加はすべて任意</h4>
+                  <p>
+                    ボランティアのお願いをすることはありますが、強制は一切ありません。
+                  </p>
+                </div>
+              </div>
+              <div class="sp-item">
+                <span class="sp-ic">📮</span>
+                <div>
+                  <h4>活動レポートをお届け</h4>
+                  <p>年4回ほど、活動報告レポートを郵送でお届けします。</p>
+                </div>
+              </div>
+            </div>
+            <a
+              class="btn btn-primary"
+              href="https://forms.gle/qvF7CN6Uri2Cz6zA9"
+              target="_blank"
+              rel="noopener"
+            >
+              <span class="btn-badge">1分で完了！</span>
+              後援会入会フォームへ
+            </a>
+            <p class="support-sub">
+              ※ご記入いただいた情報は後援会活動のみに使用します。
+            </p>
+          </div>
+          <div class="join-sub-grid">
+            <div class="join-card reveal">
+              <h3>公式LINEでつながる</h3>
+              <p>
+                活動の最新情報やイベントのお知らせを、LINEで気軽に受け取れます。
+              </p>
+              <a
+                class="btn btn-secondary"
+                href="https://lin.ee/UF5hcJx"
+                target="_blank"
+                rel="noopener"
+                >友だち追加する</a
+              >
+            </div>
+            <div class="join-card reveal">
+              <h3>SNSでフォロー＆シェア</h3>
+              <p>投稿のフォローや拡散も、大きな力になります。</p>
+              <div class="join-sns">
+                <a
+                  href="https://x.com/wakasa_kenta"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="X"
+                  class="join-x"
+                  ><svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+                    /></svg
+                ></a>
+                <a
+                  href="https://www.instagram.com/wakasa_kent"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Instagram"
+                  class="join-ig"
+                  ><svg viewBox="0 0 448 512" aria-hidden="true">
+                    <path
+                      d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+                    /></svg
+                ></a>
+                <a
+                  href="https://note.com/wakasa_kenta"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="note"
+                  class="join-note"
+                  ><svg viewBox="0 0 493 493" aria-hidden="true">
+                    <path
+                      d="m139.57,142.06c41.19,0,97.6-2.09,138.1-1.04,54.34,1.39,74.76,25.06,75.45,83.53.69,33.06,0,127.73,0,127.73h-58.79c0-82.83.35-96.5,0-122.6-.69-22.97-7.25-33.92-24.9-36.01-18.69-2.09-71.07-.35-71.07-.35v158.96h-58.79v-210.22Z"
+                    /></svg
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- お問い合わせ -->
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="sec-head reveal">
+          <span class="sec-en">Contact</span>
+          <h2 class="sec-title">お問い合わせ</h2>
+          <p class="sec-lead">
+            ご意見・ご相談・取材のご依頼など、お気軽にご連絡ください。
+          </p>
+        </div>
+        <div class="contact-cta reveal">
+          <a class="btn btn-blue" href="mailto:contact@wakasa-kenta.jp"
+            >✉ contact@wakasa-kenta.jp</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- フッター -->
+    <footer>
+      <div class="container">
+        <p class="footer-name">若さ健太</p>
+        <p class="footer-role">甲賀市議会議員（1期目）｜国民民主党</p>
+        <div class="footer-party">
+          <img src="images/国民民主党/logo.png" alt="国民民主党" />
+        </div>
+        <p class="footer-info">
+          〒528-0204 滋賀県甲賀市土山町山女原119<br />
+          contact@wakasa-kenta.jp
+        </p>
+        <div class="footer-sns">
+          <a
+            href="https://x.com/wakasa_kenta"
+            target="_blank"
+            rel="noopener"
+            aria-label="X"
+            ><svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+              /></svg
+          ></a>
+          <a
+            href="https://www.instagram.com/wakasa_kent"
+            target="_blank"
+            rel="noopener"
+            aria-label="Instagram"
+            ><svg viewBox="0 0 448 512" aria-hidden="true">
+              <path
+                d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+              /></svg
+          ></a>
+          <a
+            href="https://note.com/wakasa_kenta"
+            target="_blank"
+            rel="noopener"
+            aria-label="note"
+            class="fs-note"
+            ><svg viewBox="0 0 493 493" aria-hidden="true">
+              <path
+                d="m139.57,142.06c41.19,0,97.6-2.09,138.1-1.04,54.34,1.39,74.76,25.06,75.45,83.53.69,33.06,0,127.73,0,127.73h-58.79c0-82.83.35-96.5,0-122.6-.69-22.97-7.25-33.92-24.9-36.01-18.69-2.09-71.07-.35-71.07-.35v158.96h-58.79v-210.22Z"
+              /></svg
+          ></a>
+          <a
+            href="https://lin.ee/UF5hcJx"
+            target="_blank"
+            rel="noopener"
+            aria-label="LINE"
+            ><svg viewBox="0 0 448 512" aria-hidden="true">
+              <path
+                d="M272.1 204.2v71.1c0 1.8-1.4 3.2-3.2 3.2h-11.4c-1.1 0-2.1-.6-2.6-1.3l-32.6-44v42.2c0 1.8-1.4 3.2-3.2 3.2h-11.4c-1.8 0-3.2-1.4-3.2-3.2v-71.1c0-1.8 1.4-3.2 3.2-3.2h11.3c1 0 2.1.5 2.6 1.4l32.6 44v-42.2c0-1.8 1.4-3.2 3.2-3.2h11.4c1.8-.1 3.3 1.4 3.3 3.1zm-82-3.2h-11.4c-1.8 0-3.2 1.4-3.2 3.2v71.1c0 1.8 1.4 3.2 3.2 3.2h11.4c1.8 0 3.2-1.4 3.2-3.2v-71.1c0-1.7-1.4-3.2-3.2-3.2zm-27.5 59.6h-31.1v-56.4c0-1.8-1.4-3.2-3.2-3.2h-11.4c-1.8 0-3.2 1.4-3.2 3.2v71.1c0 .9.3 1.6.9 2.2.6.5 1.3.9 2.2.9h45.7c1.8 0 3.2-1.4 3.2-3.2v-11.4c0-1.7-1.4-3.2-3.1-3.2zM332.1 201h-45.7c-1.7 0-3.2 1.4-3.2 3.2v71.1c0 1.7 1.4 3.2 3.2 3.2h45.7c1.8 0 3.2-1.4 3.2-3.2v-11.4c0-1.8-1.4-3.2-3.2-3.2H301v-12h31.1c1.8 0 3.2-1.4 3.2-3.2V234c0-1.8-1.4-3.2-3.2-3.2H301v-12h31.1c1.8 0 3.2-1.4 3.2-3.2v-11.4c-.1-1.7-1.5-3.2-3.2-3.2zM448 113.7V399c-.1 44.8-36.8 81.1-81.7 81H81c-44.8-.1-81.1-36.9-81-81.7V113c.1-44.8 36.9-81.1 81.7-81H367c44.8.1 81.1 36.8 81 81.7zm-61.6 122.6c0-73-73.2-132.4-163.1-132.4-89.9 0-163.1 59.4-163.1 132.4 0 65.4 58 120.2 136.4 130.6 19.1 4.1 16.9 11.1 12.6 36.8-.7 4.1-3.3 16.1 14.1 8.8 17.4-7.3 93.9-55.3 128.2-94.7 23.6-26 34.9-52.3 34.9-81.5z"
+              /></svg
+          ></a>
+        </div>
+        <p class="copyright">© 2026 WAKASA KENTA All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <!-- モバイル固定CTA -->
+    <div class="sticky-cta" id="stickyCta">
+      <a
+        class="s-line"
+        href="https://lin.ee/UF5hcJx"
+        target="_blank"
+        rel="noopener"
+        >公式LINE</a
+      >
+      <a
+        class="s-join"
+        href="https://forms.gle/qvF7CN6Uri2Cz6zA9"
+        target="_blank"
+        rel="noopener"
+        >後援会に入る（無料）</a
+      >
+    </div>
+
+    <script>
+      // ふわっと出現アニメーション
+      const io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add("show");
+              io.unobserve(e.target);
+            }
+          });
+        },
+        { threshold: 0.12 },
+      );
+      document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+
+      // ヒーローを過ぎたらモバイル固定CTAを表示
+      const hero = document.querySelector(".hero");
+      const stickyCta = document.getElementById("stickyCta");
+      const heroWatcher = new IntersectionObserver(
+        (entries) => {
+          stickyCta.classList.toggle("show", !entries[0].isIntersecting);
+        },
+        { threshold: 0 },
+      );
+      heroWatcher.observe(hero);
+
+      // 下スクロールでヘッダーを隠し、上スクロールで再表示
+      const siteHeader = document.querySelector("header");
+      let lastY = window.scrollY;
+      window.addEventListener(
+        "scroll",
+        () => {
+          const y = window.scrollY;
+          if (y > lastY && y > 120) {
+            siteHeader.classList.add("hidden");
+          } else if (y < lastY) {
+            siteHeader.classList.remove("hidden");
+          }
+          lastY = y;
+        },
+        { passive: true },
+      );
+    </script>
+
+    <!-- ===== アクセス解析 ===== -->
+    <script>
+      // ▼▼ 公開前にここを自分のIDに書き替えてください ▼▼
+      // GA4: https://analytics.google.com/ でプロパティを作成し「G-」から始まる測定IDを取得
+      const GA_MEASUREMENT_ID = "G-6TRKY6D66K";
+      // Microsoft Clarity（任意）: https://clarity.microsoft.com/ でプロジェクトを作成しIDを取得
+      // スクロールヒートマップで「どこまで読まれて離脱したか」を視覚的に確認できます
+      const CLARITY_PROJECT_ID = "xishdjyqo9";
+      // ▲▲ ここまで ▲▲
+
+      // ---- GA4読み込み ----
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      const gaEnabled =
+        /^G-[A-Z0-9]+$/.test(GA_MEASUREMENT_ID) &&
+        GA_MEASUREMENT_ID !== "G-XXXXXXXXXX";
+      if (gaEnabled) {
+        const s = document.createElement("script");
+        s.async = true;
+        s.src =
+          "https://www.googletagmanager.com/gtag/js?id=" + GA_MEASUREMENT_ID;
+        document.head.appendChild(s);
+        gtag("js", new Date());
+        gtag("config", GA_MEASUREMENT_ID);
+      }
+      const track = (name, params) => {
+        if (gaEnabled) gtag("event", name, params);
+      };
+
+      // ---- Clarity読み込み ----
+      if (CLARITY_PROJECT_ID) {
+        (function (c, l, a, r, i, t, y) {
+          c[a] =
+            c[a] ||
+            function () {
+              (c[a].q = c[a].q || []).push(arguments);
+            };
+          t = l.createElement(r);
+          t.async = 1;
+          t.src = "https://www.clarity.ms/tag/" + i;
+          y = l.getElementsByTagName(r)[0];
+          y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", CLARITY_PROJECT_ID);
+      }
+
+      // ---- スクロール到達率（25/50/75/90/100%で1回ずつ送信）----
+      const depthMarks = [25, 50, 75, 90, 100];
+      const sentDepths = new Set();
+      window.addEventListener(
+        "scroll",
+        () => {
+          const scrollable =
+            document.documentElement.scrollHeight - window.innerHeight;
+          if (scrollable <= 0) return;
+          const pct = Math.round((window.scrollY / scrollable) * 100);
+          depthMarks.forEach((mark) => {
+            if (pct >= mark && !sentDepths.has(mark)) {
+              sentDepths.add(mark);
+              track("scroll_depth", { percent: mark });
+            }
+          });
+        },
+        { passive: true },
+      );
+
+      // ---- セクション到達（どこまで読まれたかを計測）----
+      const sectionWatcher = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              track("section_view", { section_id: e.target.id });
+              sectionWatcher.unobserve(e.target);
+            }
+          });
+        },
+        { threshold: 0.25 },
+      );
+      document
+        .querySelectorAll("section[id]")
+        .forEach((sec) => sectionWatcher.observe(sec));
+
+      // ---- CTA・外部リンクのクリック計測 ----
+      document.addEventListener("click", (ev) => {
+        const link = ev.target.closest("a[href]");
+        if (!link) return;
+        const href = link.href;
+        if (href.includes("forms.gle")) {
+          track("join_form_click", {
+            location:
+              link.closest("section, header, footer, .sticky-cta, .hero")?.id ||
+              "other",
+          });
+        } else if (href.includes("lin.ee")) {
+          track("line_click", {});
+        } else if (href.includes("x.com")) {
+          track("sns_click", { network: "x" });
+        } else if (href.includes("instagram.com")) {
+          track("sns_click", { network: "instagram" });
+        } else if (href.includes("note.com")) {
+          track("sns_click", { network: "note" });
+        } else if (href.startsWith("mailto:")) {
+          track("contact_click", {});
+        }
+      });
+    </script>
+  </body>
+</html>
