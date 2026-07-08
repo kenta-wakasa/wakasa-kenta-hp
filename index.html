@@ -8,6 +8,80 @@
       name="description"
       content="甲賀市議会議員・若さ健太（国民民主党）の公式サイト。都会で疲弊している場合じゃない。豊かな暮らしは甲賀にある！100年続くまちづくりに挑戦中。後援会員募集中（入会無料）。"
     />
+    <meta name="robots" content="index,follow" />
+    <meta name="theme-color" content="#f9be00" />
+    <link rel="canonical" href="https://wakasa-kenta.jp/" />
+    <link rel="preload" as="image" href="images/portrait/main.png" />
+    <meta
+      name="keywords"
+      content="若さ健太,若狹健太,わかさけんた,甲賀市議会議員,甲賀市,国民民主党,滋賀県,山女原,やわらかそう"
+    />
+    <meta property="og:locale" content="ja_JP" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="若さ健太 公式サイト" />
+    <meta property="og:title" content="若さ健太 公式サイト｜甲賀市議会議員（国民民主党）" />
+    <meta
+      property="og:description"
+      content="甲賀市議会議員・若さ健太の公式サイト。甲賀の魅力を発信し、若者の夢あふれる居場所をつくる。100年続くまちづくりに挑戦中。"
+    />
+    <meta property="og:url" content="https://wakasa-kenta.jp/" />
+    <meta property="og:image" content="https://wakasa-kenta.jp/images/portrait/main.png" />
+    <meta property="og:image:secure_url" content="https://wakasa-kenta.jp/images/portrait/main.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="600" />
+    <meta property="og:image:height" content="800" />
+    <meta property="og:image:alt" content="甲賀市議会議員・若さ健太の写真" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@wakasa_kenta" />
+    <meta name="twitter:title" content="若さ健太 公式サイト｜甲賀市議会議員（国民民主党）" />
+    <meta
+      name="twitter:description"
+      content="甲賀市議会議員・若さ健太の公式サイト。甲賀の魅力を発信し、100年続くまちづくりに挑戦中。"
+    />
+    <meta name="twitter:image" content="https://wakasa-kenta.jp/images/portrait/main.png" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://wakasa-kenta.jp/#website",
+            "url": "https://wakasa-kenta.jp/",
+            "name": "若さ健太 公式サイト",
+            "inLanguage": "ja",
+            "publisher": {
+              "@id": "https://wakasa-kenta.jp/#person"
+            }
+          },
+          {
+            "@type": "Person",
+            "@id": "https://wakasa-kenta.jp/#person",
+            "name": "若さ健太",
+            "alternateName": ["若狹 健太", "わかさ けんた", "WAKASA KENTA"],
+            "url": "https://wakasa-kenta.jp/",
+            "image": "https://wakasa-kenta.jp/images/portrait/main.png",
+            "jobTitle": "甲賀市議会議員",
+            "affiliation": {
+              "@type": "Organization",
+              "name": "国民民主党",
+              "url": "https://new-kokumin.jp/"
+            },
+            "address": {
+              "@type": "PostalAddress",
+              "addressRegion": "滋賀県",
+              "addressLocality": "甲賀市"
+            },
+            "email": "mailto:contact@wakasa-kenta.jp",
+            "sameAs": [
+              "https://x.com/wakasa_kenta",
+              "https://www.instagram.com/wakasa_kent",
+              "https://note.com/wakasa_kenta",
+              "https://lin.ee/UF5hcJx"
+            ]
+          }
+        ]
+      }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -424,6 +498,10 @@
         color: var(--gray);
         font-size: 0.95rem;
         font-weight: 500;
+      }
+      /* 見出しの行は途中で折り返さない（あふれる場合はJSで縮小） */
+      .fit-line {
+        white-space: nowrap;
       }
 
       /* ふわっと出現 */
@@ -1318,7 +1396,13 @@
           </div>
         </div>
         <div class="hero-photo">
-          <img src="images/portrait/main.png" alt="若さ健太の写真" />
+          <img
+            src="images/portrait/main.png"
+            alt="甲賀市議会議員・若さ健太の写真"
+            width="600"
+            height="800"
+            fetchpriority="high"
+          />
         </div>
       </div>
       <svg
@@ -2062,6 +2146,60 @@
         },
         { passive: true },
       );
+
+      // 見出しの各行（<br>区切り）を折り返し禁止にし、
+      // 横幅に収まらない場合はフォントサイズを自動で縮小する
+      function wrapHeadingLines(el) {
+        if (el.dataset.fitWrapped) return;
+        el.dataset.fitWrapped = "1";
+        const groups = [];
+        let current = [];
+        [...el.childNodes].forEach((node) => {
+          if (node.nodeName === "BR") {
+            groups.push(current);
+            current = [];
+          } else {
+            current.push(node);
+          }
+        });
+        groups.push(current);
+        el.textContent = "";
+        groups.forEach((group, i) => {
+          const line = document.createElement("span");
+          line.className = "fit-line";
+          group.forEach((n) => line.appendChild(n));
+          el.appendChild(line);
+          if (i < groups.length - 1) {
+            el.appendChild(document.createElement("br"));
+          }
+        });
+      }
+      function fitHeadings() {
+        document.querySelectorAll(".sec-title, .hero-catch").forEach((el) => {
+          wrapHeadingLines(el);
+          el.style.fontSize = "";
+          if (el.clientWidth < 60) return; // レイアウト確定前は何もしない
+          const base = parseFloat(getComputedStyle(el).fontSize);
+          if (el.scrollWidth > el.clientWidth + 1) {
+            const ratio = el.clientWidth / el.scrollWidth;
+            const size = Math.max(base * ratio - 0.5, base * 0.55);
+            el.style.fontSize = size + "px";
+          }
+        });
+      }
+      let fitTimer;
+      const scheduleFit = () => {
+        clearTimeout(fitTimer);
+        fitTimer = setTimeout(fitHeadings, 150);
+      };
+      if (document.fonts) {
+        document.fonts.ready.then(fitHeadings);
+        // Webフォントが後から読み込まれた場合も再計測
+        document.fonts.addEventListener("loadingdone", scheduleFit);
+      }
+      window.addEventListener("load", fitHeadings);
+      window.addEventListener("resize", scheduleFit);
+      fitHeadings();
     </script>
 
     <!-- ===== アクセス解析 ===== -->
